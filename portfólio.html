@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        .titulo {
+            margin: 20px auto;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            color: white;
+            font-size: 48px;
+        }
+        .imagem {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .textoanimacao {
+            z-index: 1;
+            position: relative;
+            padding: 20px;
+            background-color:rgba(0, 128, 0, 0.5);
+            display: inline-block;
+            border-radius: 50px;
+            margin-left: 570px;
+            margin-top: 500px;
+            animation: animartexto 2s infinite;
+            color:black;
+            font-style: italic;
+        }
+        @keyframes animartexto {
+            0% {
+                top: 0px;
+            }
+            50% {
+                top:30px;
+            }
+            100% {
+                top:0px;
+            }
+        }
+        .habilidades {
+            color: green;
+        }
+        .textoprolado {
+            z-index: 1;
+            position: relative;
+            font-size: 60px;
+            margin-top: -500px;
+            color: white;
+            margin-left: 500px;
+            animation: prolado 5s forwards;
+            font-style: oblique;
+        }
+        .vermelho {
+            color: red;
+        }
+        @keyframes prolado {
+            0% {
+                left: 0px;
+            }
+            100% {
+                left: -500px;
+            }
+        }
+        .primeiro {
+    padding: 30px;
+    background-color: grey;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    margin-top: 220px;
+    margin-left: 610px;
+    border-radius: 10px;
+}
+.jogoprojeto {
+    padding: 10px;
+    background-color: cyan;
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    margin-top: 220px;
+    margin-left: 300px;
+    border-radius: 10px;
+    font-size: 33px;
+    text-decoration: none;
+    color: black;
+}
+.quiz {
+    z-index:  1;
+    position: relative;
+    margin-top: 220px;
+    padding: 10px;
+    background-color: blue;
+    display: inline-block;
+    margin-left: -15px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 33px;
+}
+.pets {
+    z-index: 1;
+    padding: 8px;
+    background-color: pink;
+    position: absolute;
+    margin-left: 670px;
+    margin-top: 220px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+.academiasitee {
+    height: 137px;
+    z-index: 1;
+    position: absolute;
+    background-color: red;
+    margin-left: 990px;
+    margin-top: 220px;
+    text-decoration: none;
+    color: black;
+    font-size: 29px;
+    text-align: center;
+    border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+    <h1 class="titulo"></h1>
+    <img class="imagem" src="curso-de-programacao.jpg" alt="Imagem do Portfólio">
+    <h1 class="textoanimacao">Experiências e projetos:</h1>
+    <h1 class="textoprolado">Nesse site você verá <br>minhas<br><span class="habilidades">habilidades<br></span>e <span class="vermelho">projetos</span>!</h1>
+    <h1 class="primeiro">HTML + CSS  + JS <br>🖥️</h1>
+    <a href="cenário.html" class="jogoprojeto">Cópia do jogo omori<br>(clique para acessar)<br>🎮</a>
+    <a href="y.html" class="quiz">Quiz interativo<br>(clique para acessar)<br>❓</a>
+    <a  class="pets"href="saturation.html">Clique no animal<br> e na comida para alimenta-lo<br>(clique para acessar)<br>🐶</a>
+    <a class="academiasitee" href="academiasite.html">Site de academia<br>(clique para acessar)<br>🏋️‍♂️</a>
+    <script>
+      var palavra = "Bem vindo ao portfólio de Pedro!"
+      var index = 0
+      var texto = document.querySelector(".titulo")
+      function getword() {
+      texto.innerHTML += palavra.charAt(index)
+      index++
+      setTimeout(getword,100)
+      }
+      getword()
+    </script>
+</body>
+</html>

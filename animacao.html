@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movendo e Esticando Imagem</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    #imagem {
+      width: 150px;
+      transition: transform 0.5s, width 0.5s;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <img id="imagem" src="cookie-svg-2.png" alt="Imagem" />
+
+  <script>
+    const imagem = document.getElementById('imagem');
+
+    imagem.addEventListener('click', () => {
+      imagem.style.transform = "translateX(200px)"
+      imagem.style.width = '300px';
+    });
+  </script>
+</body>
+</html>

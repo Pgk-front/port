@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: cyan;
+        }
+        .caramelao{
+            border-radius: 50px;
+            height: 80px;
+        }
+        .petzao {
+            padding: 50px;
+            background-color: white;
+            display: inline-block;
+        border-radius: 12px;
+        margin-left: 300px;
+        margin-top: 100px;
+        cursor: pointer;
+        }
+        .gatito {
+            height: 89px;
+            border-radius: 30px;
+        }
+        .petzinho {
+            padding: 50px;
+            background-color: white;
+            display: inline-block;
+        border-radius: 12px;
+     margin-left: 100px;
+     margin-top: 100px;
+     cursor: pointer;
+       }
+       .cookie {
+        height: 100px;
+        cursor: pointer;
+       }
+       .cake {
+        height: 90px;
+        border-radius: 90%;
+        cursor: pointer;
+       }
+       .selected {
+        border: 6px solid red;
+       }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>project made by: Pedro Galvão Knoll</h1>
+    </center>
+        <div class="petzao" id="pet1" onclick="selectPet(1)">
+            <center>
+            <h1>Cachorro caramelo</h1>
+                <img class="caramelao" src="caramelo.jpeg">
+                <h1>Nível de saturação: <span id="hungry1">100</span>%</h1>
+                <p  id="msg1"></p>
+            </center>
+
+    </div>  
+        <div class="petzinho" id="pet2" onclick="selectPet(2)">
+            <center>
+            <h1>Gato cinza pet</h1>
+                <img class="gatito" src="gatitos.jpg">
+                <h1>Nível de saturação: <span id="hungry2">100</span>%</h1>
+                <p  id="msg2"></p>
+            </center>         
+        </div>
+        <br>
+        <br>
+        <center>
+            <img class="cookie" src="cookie-svg-2.png" onclick="feedpet(1)">
+            <img class="cake" src="gluten-free-new-york-cheesecake-1450985-hero-01-dc54f9daf38044238b495c7cefc191fa.jpg" onclick="feedpet(5)">
+        </center>
+<script>
+    class Animal {
+        constructor(id) {
+            this.id = id;
+            this.life = 100
+            this.hungry = document.getElementById(`hungry${id}`)
+            this.msg = document.getElementById(`msg${id}`)
+            this.petelement = document.getElementById(`pet${id}`) 
+        }
+        decreaselife() {          
+            this.life -= 10;
+        if (this.life < 0) {
+            this.life = 0;
+        }
+        this.hungry.innerHTML = this.life;
+    if(this.life === 0) {
+        this.msg.innerHTML = "Pet fugiu!"
+   }
+        }
+        feed(amount) {
+    this.life += amount;
+    this.hungry.innerHTML = this.life;
+    if (this.life > 100) {
+        this.life = 100;
+    }
+}
+
+    }
+  function feedpet(amount) {
+    if(selectedpet === 1) {
+        pet1.feed(amount);
+    }
+    else {
+        pet2.feed(amount);
+     }
+  }
+    let pet1element = document.getElementById("pet1");
+   let pet2element = document.getElementById("pet2");
+     function selectPet(id) {
+        pet1element.classList.remove("selected");
+        pet2element.classList.remove("selected");
+
+        if(id === 1) {
+            pet1element.classList.add("selected");
+            selectedpet = 1;
+        }
+        else if(id === 2) {
+            pet2element.classList.add("selected");
+            selectedpet = 2;
+        }
+     }
+
+     let pet1 = new Animal(1);
+    let pet2 = new Animal(2);
+    setInterval(() => {
+ pet1.decreaselife();
+ pet2.decreaselife();
+}, 3000)
+</script>
+</body>
+</html>

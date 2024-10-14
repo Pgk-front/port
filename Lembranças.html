@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .personagem {
+            height: 250px;
+            margin-left: 500px;
+            margin-top: 250px;
+            position: relative;
+            z-index: 2;
+        }
+        .texto {
+            background: linear-gradient(to right,cyan,yellow,red);
+            height: 150px;
+            z-index: 1;
+            position: relative;
+            margin-top: -500px;
+            width: 600px;
+            border: 4px solid black;
+            border-radius: 50px;
+            margin-left: 450px;
+            padding: 20px;
+            display: flex;
+        }
+        .domal {
+            height: 250px;
+            margin-top: 40px;
+            z-index: 0;
+            position: relative;
+            z-index: 0;
+            position: absolute; 
+            margin-top: -200px;
+        }
+    </style>
+</head>
+<body>
+    <img id="personagem" class="personagem" src="c:\Users\pesdr\Desktop\Lembranças\Osni\piscando\animablink.gif">
+    <div id="texto" class="texto"></div>
+    <script>
+         var domal = document.getElementById("domal");
+        var personagem = document.getElementById("personagem");
+        var esquerda = false;
+        var posicao = 10
+        var velocidade = 10;
+        var direita = false
+        var domal = document.getElementById("domal");
+        function animateum() {
+            if (esquerda) {
+                posicao -= velocidade;
+                personagem.style.left = posicao + "px";
+                requestAnimationFrame(animateum);
+            }
+        }
+
+        document.addEventListener("keydown", (event) => {
+            if ((event.key === "a" || event.key === "A") && !esquerda) {
+                esquerda = true;
+                personagem.src = "c:/Users/pesdr/Desktop/lembranças/Osni/direita/left.gif";
+                animateum();
+            }
+        });
+
+        document.addEventListener("keyup", (event) => {
+            if (event.key === "a" || event.key === "A") {
+                esquerda = false;
+                personagem.src = "c:/Users/pesdr/Desktop/lembranças/Osni/piscando/animablink.gif"; 
+            }
+        });
+        function animatedois() {
+            if(esquerda) {
+                posicao += velocidade
+                personagem.style.left = posicao + "px"
+                requestAnimationFrame(animatedois)
+            }
+        }
+        document.addEventListener("keydown", (event) =>  {
+    if(event.key === "D" || event.key === "d" && !esquerda) {
+   esquerda = true
+   personagem.src = "c:/Users/pesdr/Desktop/lembranças/Osni/esquerda/esquerda.gif"
+   animatedois()
+    }
+        })
+        document.addEventListener("keyup", (event) => {
+    if(event.key === "d" || event.key === "D") {
+    esquerda = false
+    personagem.src = "c:/Users/pesdr/Desktop/lembranças/Osni/piscando/animablink.gif"
+    }
+        })
+        var palavra = "DO YOU KNOW ###? YOU KNOW IT! THEN, CHALLENGE IT!"
+        var texto = document.getElementById("texto")
+        var index = 0
+        setInterval(() => {
+            texto.innerHTML += palavra.charAt(index)
+            index++
+        }, 100);
+        setTimeout(() => {
+            var domal = document.createElement("img")
+            domal.src = "c:/Users/pesdr/Desktop/lembranças/Osni/PESADELO.png"
+            document.body.appendChild(domal)
+            domal.classList.add("domal")
+        }, 5000);
+        setInterval(() => {
+            window.location.href = "vsnightmare.html"
+        }, 12000);
+    </script>
+</body>
+</html>

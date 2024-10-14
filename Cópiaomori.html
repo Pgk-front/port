@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #batalha {
+            height: 705px;
+            width: 1500px;
+            position:  absolute;
+            z-index: 1;
+        }
+        #aubrey {
+            height: 705px;
+            width: 1500px;
+            position:  absolute;
+            z-index: 1;
+        }
+        #sunny {
+            height: 150px;
+            position:  absolute;
+            z-index: 1;
+            display: flex;
+            margin-top: 515px;
+            margin-left: 20px;
+            border-radius: 30px;
+            border: 10px solid red;
+        }
+       #estado {
+        display: inline;
+            position:  absolute;
+            z-index: 1;
+            display: flex;
+            border: 3px solid green;
+            background: linear-gradient(to right, red, blue, yellow);
+            color: white;
+            border-radius: 50px;
+            font-style: italic;
+            margin-top: 472px;
+            margin-left: 55px;
+               }
+       #kel {
+        display: inline;
+            position:  absolute;
+            z-index: 1;
+            display: flex;
+            background: linear-gradient(to right, red, blue, yellow);
+            color: white;
+            border-radius: 50px;
+            font-style: italic;
+            margin-top: 515px;
+            margin-left: 1300px;
+            height: 150px;
+            border: 10px solid yellow;
+             
+       }
+       #estado2 {
+        display: inline;
+            position:  absolute;
+            z-index: 1;
+            display: flex;
+            border: 3px solid green;
+            background: linear-gradient(to right, red, blue, yellow);
+            color: white;
+            border-radius: 50px;
+            font-style: italic;
+            margin-top: 472px;
+            margin-left: 1335px;
+               }
+               #batalhar {
+                display: inline;
+            position:  absolute;
+            z-index: 1;
+            display: flex;
+            background: linear-gradient(to right, red, blue, yellow);
+            color: white;
+            border-radius: 50px;
+            font-style: italic;
+               }
+               #batalhar {
+                display: inline;
+            position:  absolute;
+            z-index: 1;
+            display: flex;
+            background: linear-gradient(to right, red, blue, yellow);
+            color: white;
+            border-radius: 50px;
+            font-style: italic;
+            margin-left: 700px;
+            margin-top: 540px;
+            font-size: 40px;
+               }
+               #fugir {
+                display: inline;
+            position:  absolute;
+            z-index: 1;
+            display: flex;
+            background: linear-gradient(to right, red, blue, yellow);
+            color: white;
+            border-radius: 50px;
+            font-style: italic;
+            margin-left: 730px;
+            margin-top: 600px;
+            font-size: 40px;
+               }
+               #omori {
+                display: inline;
+            position:  absolute;
+            z-index: 1;
+            display: flex;
+            background: linear-gradient(to right, red, blue, yellow);
+            color: white;
+            border-radius: 50px;
+            font-style: italic;
+            margin-left: 30px;
+            margin-top: 680px;
+            font-size: 40px;
+            height: 20px;
+            width: 150px;
+               }
+               #kelzinho {
+                display: inline;
+            position:  absolute;
+            z-index: 1;
+            display: flex;
+            background: linear-gradient(to right, red, blue, yellow);
+            color: white;
+            border-radius: 50px;
+            font-style: italic;
+            margin-left: 1320px;
+            margin-top: 685px;
+            font-size: 40px;
+            height: 20px;
+            width: 150px;
+               }
+               .caixona {
+    z-index: 2;
+    background-color: black;
+    height: 200px;
+    width: 500px;
+    position: absolute;
+ margin-top: 480px;
+ border: 5px solid white;
+ margin-left: 530px;
+}
+.atacar {
+    color: green;
+    z-index: 2;
+    position: absolute;
+    background-color: white;
+    margin-left: 600px;
+    margin-top: 500px;
+font-size: 30px;
+border: 1px solid yellow;
+border-radius: 40px;
+}
+.concentrar {
+    color: white;
+    z-index: 2;
+    position: absolute;
+    background-color: green;
+    margin-left: 780px;
+    margin-top: 500px;
+font-size: 20px;
+border: 5px solid grey;
+border-radius: 40px;
+}
+#textobatalha {
+    color: white;
+    z-index: 2;
+    position: absolute;
+    background-color: black;
+font-size: 30px;
+border: 5px solid red;
+border-radius: 40px;
+height: 300px;
+width: 350px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 1100px;
+margin-top: -100px;
+}
+.raiva {
+    z-index: 3;
+    background-color: green;
+    display: inline-block;
+    position: absolute;
+    border: 5px solid grey;
+    margin-left: 500px;
+    margin-top: 500px;
+}
+.foco {
+    z-index: 3;
+    color: white;
+    background-color: red;
+    display: inline-block;
+    position: absolute;
+    border: 5px solid yellow;
+    margin-left: 700px;
+    margin-top: 500px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+.sorvete {
+    color: white;
+    z-index: 3;
+    background-color: blue;
+    display: inline-block;
+    position: absolute;
+    border: 5px solid cyan;
+    margin-left: 550px;
+    margin-top: 600px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+.calma {
+    color: white;
+    z-index: 3;
+    background-color: grey;
+    display: inline-block;
+    position: absolute;
+    border: 5px solid goldenrod;
+    margin-left: 750px;
+    margin-top: 600px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+.spray {
+    color: white;
+    z-index: 3;
+    background-color: grey;
+    display: inline-block;
+    position: absolute;
+    border: 5px solid goldenrod;
+    margin-left: 750px;
+    margin-top: 600px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+.palmada {
+background: url(coisas/palma-unscreen.gif);
+}
+.rajada {
+background: url(coisas/ataque-unscreen.gif);
+}
+.kr {
+    z-index: 4;
+    position: absolute;
+    background: url(coisas/palma-unscreen.gif);
+    margin-top: 500px;
+    margin-left: 90px;
+}
+.cr {
+    z-index: 4;
+    position: absolute;
+    background: url(coisas/palma-unscreen.gif);
+    margin-top: 500px;
+    margin-left: 1400px;
+}
+.rajadinha {
+    z-index: 4;
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 500px;
+    height: 400px;
+    width: 300px;
+}
+    </style>
+</head>
+<body>
+    <img id="batalha" src="coisas/campo_de_batalla_naruto_shippuden_by_lwisf3rxd-d62sbe6.jpg">
+    <img id="aubrey" src="coisas/ezgif-3-6cbb916ed1.gif">
+    <img id="sunny" src="coisas/neutral-sunny-omori.gif">
+    <h1 id="estado">Neutro</h1>
+    <img id="kel"src="coisas/kel-omori-omori.gif">
+    <h1 id="estado2">Neutro</h1>
+    <button id="batalhar" onclick="batalhar()">BATALHAR</button>
+    <button id="fugir" onclick="fugir()">FUGIR</button>
+    <progress id="omori" value="100" max="100"></progress>
+    <progress id="kelzinho" value="100" max="100"></progress>
+    <audio id="deep" src="coisas/Stat Down  OMORI SFX.mp3"></audio> 
+    <audio id="p" src="coisas/091-swirly-1000x.mp3" loop></audio>
+    <h1 id="textobatalha">O que Sunny e Kel vão fazer?</h1>
+    <audio id="c" src="coisas/omori-sfx.mp3"></audio>
+    <audio id="picnic" src="coisas/omori-sfx (3).mp3"></audio>
+    <audio id="sadpoem" src="coisas/omori-sfx (4).mp3"></audio>
+    <audio id="p" src="coisas/spray-sound-effect-in-high-quality.mp3"></audio>
+    <script>
+    var maisdano = 20;
+    maisataque = 20;
+    var raivatrue = false;
+         var vidasubrey = 500;
+         var sorvetetrue = false;
+         var menosdano = 10
+         var kits = 5
+        function fugir() {
+ var audio = document.getElementById("deep");
+ audio.play();
+        }
+        function batalhar() {
+            var somdabatalha = document.getElementById("p")
+            somdabatalha.play();
+            var batalhar = document.getElementById("batalhar")
+            batalhar.style.display = "none"
+            var fugir = document.getElementById("fugir")
+            fugir.style.display = "none"
+        var caixa = document.createElement("h1")
+        document.body.appendChild(caixa)
+        caixa.classList.add("caixona")
+        var atacar = document.createElement("button")
+        document.body.appendChild(atacar)
+        atacar.textContent = "Soco"
+        atacar.classList.add("atacar")
+        var raiva = document.createElement("button")
+        document.body.appendChild(raiva)
+        raiva.classList.add("concentrar")
+        raiva.textContent = "Suco misterioso"
+        var foco = document.createElement("button")
+        foco.classList.add("foco")
+        foco.textContent = "Foco"
+        document.body.appendChild(foco)
+        var sorvete = document.createElement("button")
+        sorvete.classList.add("sorvete")
+        sorvete.textContent = "Sorteve estragado"
+        document.body.appendChild(sorvete)
+        var calma = document.createElement("button")
+        calma.classList.add("calma")
+        calma.textContent = "Calma"
+        document.body.appendChild(calma)
+        var spray = document.createElement("button")
+        spray.classList.add("spray")
+        spray.textContent = "Spray de pimenta"
+        document.body.appendChild(spray)
+        var omorikel = document.getElementById("omori")
+        atacar.onclick = function()  {
+            spray.style.display = "none"
+atacar.style.display = "none"
+sorvete.style.display = "none"
+foco.style.display = "none"
+raiva.style.display = "none"
+calma.style.display = "none"
+if(raivatrue) {
+    vidasubrey -= 20
+}
+if(sorvetetrue) {
+    vidasubrey += 20
+    
+}
+  
+setTimeout(() => {
+var gif = document.createElement("img")
+gif.src = "coisas/palma-unscreen.gif"
+document.body.appendChild(gif)
+gif.classList.add("kr")
+omorikel.value -= 20;
+var sunny = document.getElementById("sunny")
+sunny.src = "coisas/injured-sunny-injured.gif"
+var audio = document.getElementById("deep");
+audio.play();
+var kel = document.getElementById("kel")
+kel.src = "coisas/omori-kel.gif"
+var kelvida = document.getElementById("kelzinho")
+kelvida.value -=20
+var gifkel = document.createElement("img");
+        gifkel.src = "coisas/palma-unscreen.gif";
+        document.body.appendChild(gifkel);
+        gifkel.classList.add("cr");
+        var rajada = document.createElement("img")
+        rajada.classList.add("rajadinha")
+        document.body.appendChild(rajada)
+        rajada.src = "coisas/ataque-unscreen.gif"
+        fimdejogo();
+},2000)
+setTimeout(() => {
+    var rajada = document.querySelector(".rajadinha")
+    rajada.remove()
+    var gif = document.querySelector(".kr")
+        gif.remove();
+        spray.style.display = "block"
+atacar.style.display = "block"
+sorvete.style.display = "block"
+foco.style.display = "block"
+raiva.style.display = "block"
+calma.style.display = "block"
+sunny.src = "coisas/neutral-sunny-omori.gif"
+kel.src = "coisas/kel-omori-omori.gif"
+var gifkel = document.querySelector(".cr")
+gifkel.remove()
+if (raivatrue) {
+            sunny.src = "coisas/omori-sunny.gif"
+            kel.src = "coisas/kel-omori-omori (2).gif"; 
+            sorvetetrue = false 
+}
+if(sorvetetrue) {
+    sunny.src = "coisas/sunny-sad-sunny-omori.gif"
+    kel.src = "coisas/kel-omori-omori (1).gif"
+    raivatrue = false
+    omorikel.value += 10
+    var kelvida = document.getElementById("kelzinho")
+    kelvida.value += 10
+    }
+if(raivatrue) {
+    omorikel.value -=10
+    var kelvida = document.getElementById("kelzinho")
+kelvida.value -= 10
+sorvetetrue = false
+}
+if(sorvetetrue) {
+    raivatrue = false
+
+}
+fimdejogo();
+},3000)
+setTimeout(() => {
+ var caixabatalha = document.getElementById("textobatalha")
+ vidasubrey -= 50
+ caixabatalha.innerHTML = "Todos eles se atacam, vidas dos rebeldes: " + vidasubrey
+ var audioo = document.getElementById("c")
+ audioo.play()
+ fimdejogo();
+ if(sorvetetrue) {
+    raivatrue = false
+    if(raivatrue) {
+        sorvetetrue = false
+    }
+ }
+ if(raivatrue) {
+    sorvetetrue = false
+ }
+},500)
+fimdejogo();
+}
+foco.onclick = function raivinha() {
+     raivatrue = true;
+     omorikel.value -= 10
+     var kelvida = document.getElementById("kelzinho")
+     kelvida.value -= 10;
+    spray.style.display = "none"
+atacar.style.display = "none"
+sorvete.style.display = "none"
+foco.style.display = "none"
+raiva.style.display = "none"
+calma.style.display = "none"
+setTimeout(() => {
+    var caixabatalha = document.getElementById("textobatalha")
+    caixabatalha.innerHTML = "Você tentou focar, mas não conseguiu, vida do inimigo: " + vidasubrey
+    var sunny = document.getElementById("sunny")
+    sunny.src = "coisas/omori-sunny.gif"
+    var kel = document.getElementById("kel")
+    kel.src = "coisas/kel-omori-omori (2).gif"
+    var estado = document.getElementById("estado")   
+            estado.innerHTML = "Furioso"
+            var estado2 = document.getElementById("estado2")
+estado2.innerHTML = "Furioso"
+var audioo = document.getElementById("c")
+ audioo.play()
+ sorvetetrue = false
+ fimdejogo();
+},500)
+setTimeout(() => {
+    spray.style.display = "block"
+atacar.style.display = "block"
+sorvete.style.display = "block"
+foco.style.display = "block"
+raiva.style.display = "block"
+calma.style.display = "block"
+fimdejogo();
+},2000)
+}
+raiva.onclick = function() {
+var som = document.getElementById("picnic")
+kits =kits - 1
+
+if (kits === 0) {
+    raiva.disabled = true;
+}
+som.play()
+var kelvida = document.getElementById("kelzinho");
+    var omorikel = document.getElementById("omori");
+    omorikel.value += 50
+    kelvida.value += 70
+    spray.style.display = "none"
+atacar.style.display = "none"
+sorvete.style.display = "none"
+foco.style.display = "none"
+raiva.style.display = "none"
+calma.style.display = "none"
+var caixabatalha = document.getElementById("textobatalha")
+caixabatalha.innerHTML =  "Era um suco bom! vidas de aubrey: " + vidasubrey + " seus sucos: " + kits
+setTimeout(() => {
+    atacar.style.display = "block"
+sorvete.style.display = "block"
+foco.style.display = "block"
+raiva.style.display = "block"
+calma.style.display = "block"
+spray.style.display = "block"
+fimdejogo();
+},2000)
+}
+sorvete.onclick = function() {
+    var estado = document.getElementById("estado")   
+          estado.innerHTML = "Triste"
+          var estado2 = document.getElementById("estado2")   
+          estado2.innerHTML = "Triste"
+sorvetetrue = true;
+var sadpoem = document.getElementById("sadpoem")
+sadpoem.play()
+var sunny = document.getElementById("sunny")
+    sunny.src = "coisas/sunny-sad-sunny-omori.gif"
+    var kel = document.getElementById("kel")
+    kel.src = "coisas/kel-omori-omori (1).gif"
+    var caixabatalha = document.getElementById("textobatalha")
+    caixabatalha.innerHTML = "Você entra numa tristeza profunda, vida do inimigo: " + vidasubrey
+    spray.style.display = "none"
+atacar.style.display = "none"
+sorvete.style.display = "none"
+foco.style.display = "none"
+raiva.style.display = "none"
+calma.style.display = "none"
+raivatrue = false
+setTimeout(() => {
+    atacar.style.display = "block"
+sorvete.style.display = "block"
+foco.style.display = "block"
+raiva.style.display = "block"
+calma.style.display = "block"
+spray.style.display = "block"
+fimdejogo();
+},2000)
+};
+spray.onclick = function() {
+    var spraySom = document.getElementById("p");
+    spraySom.play();
+
+    vidasubrey -= 500;
+
+    fimdejogo();
+};
+function fimdejogo() {
+    var kelvida = document.getElementById("kelzinho").value;
+    var omorikel = document.getElementById("omori").value;
+    if(vidasubrey <= 0) {
+        var caixabatalha = document.getElementById("textobatalha");
+        caixabatalha.innerHTML = "Aubrey e sua gangue perderam!";
+        vidasubrey = 0
+        atacar.disabled = true
+sorvete.disabled = true
+foco.disabled = true
+raiva.disabled = true
+calma.disabled = true
+spray.disabled = true
+    }
+    if(omorikel <= 0 && kelvida <= 0) {
+        var caixabatalha = document.getElementById("textobatalha");
+        caixabatalha.innerHTML = "Você e Kel perderam!";
+        atacar.disabled = true
+sorvete.disabled = true
+foco.disabled = true
+raiva.disabled = true
+calma.disabled = true
+spray.disabled = true
+}
+}
+        }
+    </script>
+</body>
+</html>

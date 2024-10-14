@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .esparta {
+            color: red;
+            z-index: 1;
+            position: relative;
+        }
+        #imagem {
+            height: 628px;
+            z-index: -1;
+            position: relative;
+            width: 1600px;
+        }
+        .green {
+            color: green;
+        }
+        body {
+    background-color: black;
+}
+
+
+        .nossa {
+            color: white;
+            margin-left: 1000px;
+            z-index: -1;
+            position: relative;
+            margin-top: -670px;
+        }
+            .agende {
+            color: green;
+            position: absolute;
+            z-index: 1;
+            margin-left: 650px;
+            margin-top: -60px;
+            }
+            .red {
+                color: red;
+            }
+            .desculpas {
+                font-size: 100px;
+            }
+            .iniciar {
+                background-color: green;
+                font-size: 70px;
+                border: 10px solid white;
+                border-radius: 30px;
+                margin-left: 120px;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+            .iniciar:hover {
+        transform: scale(1.2);
+            }
+        
+    </style>
+</head>
+<body>
+    <h1><span class="green">GYM OF </span><span class="esparta">ESPARTA</span></h1>
+    <img id="imagem" src="pngtree-spartan-in-a-city-is-standing-near-mountains-picture-image_2734364.jpg" alt="Imagem de Treinamento">
+    <h1 class="nossa">NOSSA HISTÓRIA</h1>
+    <h1 class="agende">AGENDE UMA VISITA</h1>
+    <h1>TORNE-SE MAIS <span class="red">FORTE</span>
+         DO QUE SUAS</h1>
+         <h1 class="desculpas">DESCULPAS</h1>
+         <button class="iniciar">INICIAR</button>
+         <script>
+            setInterval(() => {
+                setTimeout(() => {
+                    imagem.style.opacity = 0.8
+                }, 1600);
+                setTimeout(() => {
+                    imagem.style.opacity = 0.5
+                }, 1800);
+                var imagem = document.getElementById("imagem")
+                imagem.src = "Esparta-1024x612.jpg"
+                imagem.style.opacity = 1
+            }, 2000);
+            setInterval(() => {
+                setTimeout(() => {
+                    imagem.style.opacity = 0.8
+                }, 1600);
+                setTimeout(() => {
+                    imagem.style.opacity = 0.5
+                }, 1800);
+                var imagem = document.getElementById("imagem")
+                imagem.src = "Leonidas_Statue_2011.jpg"
+                imagem.style.opacity = 1
+            }, 4000);
+            setInterval(() => {
+                setTimeout(() => {
+                    imagem.style.opacity = 0.8
+                }, 1600);
+                setTimeout(() => {
+                    imagem.style.opacity = 0.5
+                }, 1800);
+                var imagem = document.getElementById("imagem")
+                imagem.src = "pngtree-spartan-in-a-city-is-standing-near-mountains-picture-image_2734364.jpg"
+                imagem.style.opacity = 1
+            }, 6000);
+         </script>
+</body>
+</html>
